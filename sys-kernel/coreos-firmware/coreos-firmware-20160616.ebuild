@@ -1,0 +1,1 @@
+../../../coreos-overlay/sys-kernel/coreos-firmware/coreos-firmware-99999999.ebuild
