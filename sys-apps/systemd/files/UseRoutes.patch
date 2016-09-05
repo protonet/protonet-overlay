@@ -1,0 +1,15 @@
+diff --git a/src/network/networkd-dhcp4.c b/src/network/networkd-dhcp4.c
+index 0589ebf..c5b61ab 100644
+--- a/src/network/networkd-dhcp4.c
++++ b/src/network/networkd-dhcp4.c
+@@ -57,6 +57,10 @@ static int link_set_dhcp_routes(Link *link) {
+ 
+         assert(link);
+         assert(link->dhcp_lease);
++        assert(link->network);
++
++        if (!link->network->dhcp_use_routes)
++                return 0;
+ 
+         r = sd_dhcp_lease_get_router(link->dhcp_lease, &gateway);
+         if (r < 0 && r != -ENODATA)
