@@ -11,6 +11,7 @@ SLOT="0"
 KEYWORDS="amd64 arm arm64 x86"
 
 RDEPEND="coreos-base/coreos
+	net-analyzer/tcpdump
 	sys-fs/ntfs3g
 	sys-fs/zfs
 	sys-fs/zfs-kmod
